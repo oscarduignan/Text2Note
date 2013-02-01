@@ -9,7 +9,7 @@ app = Flask(__name__)
 
 auth_token = os.environ.get('EVERNOTE_AUTH_TOKEN')
 
-client = EvernoteClient(token=auth_token)
+client = EvernoteClient(token=auth_token, sandbox=False)
 
 note_store = client.get_note_store()
 
